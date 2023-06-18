@@ -1,6 +1,6 @@
 
 
-export const List = () => {
+export const TweetsList = () => {
   
   return(
     <div>
