@@ -5,7 +5,7 @@ import avatar from '../../images/tweet-card/boy-card-2x.png';
 
 
 
-export const TweetCard = () => {
+export const TweetCard = ({tweet}) => {
 
   return(
     <Card>
@@ -19,8 +19,8 @@ export const TweetCard = () => {
         <Avatar alt='pic' src={avatar}/>
       </AvatarWrapper>
       <DescrWrapper>
-        <Txt>777 tweets</Txt>
-        <Txt>100,500 Followers</Txt>
+        <Txt>{`${tweet.tweets} tweets`}</Txt>
+        <Txt>{`${tweet.followers} Followers`}</Txt>
         <Btn>Follow</Btn>
       </DescrWrapper>
     </Card>

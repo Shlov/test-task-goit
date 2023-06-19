@@ -19,7 +19,7 @@ export const Main = () => {
       >
         <h1>TWEETS</h1>
         <NavLink to='/tweets'>Go to tweets</NavLink>
-        <TweetCard/>
+        {/* <TweetCard/> */}
       </div>
     </>
   );
