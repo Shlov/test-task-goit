@@ -1,13 +1,26 @@
 {
   "files": {
-    "main.css": "/test-task-goit/static/css/main.7acaea2f.css",
-    "main.js": "/test-task-goit/static/js/main.07d3183d.js",
+    "main.css": "/test-task-goit/static/css/main.e62d0402.css",
+    "main.js": "/test-task-goit/static/js/main.88a21af0.js",
+    "static/media/boy-card-2x.png": "/test-task-goit/static/media/boy-card-2x.41193106588ac088f8e4.png",
+    "static/media/picture-card.png": "/test-task-goit/static/media/picture-card.86562350dcaa714a1442.png",
+    "static/media/montserrat-latin-400-normal.woff": "/test-task-goit/static/media/montserrat-latin-400-normal.0f1794a79a689a577c2a.woff",
+    "static/media/montserrat-latin-ext-400-normal.woff": "/test-task-goit/static/media/montserrat-latin-ext-400-normal.688aee1c9dd2450dd804.woff",
+    "static/media/montserrat-latin-400-normal.woff2": "/test-task-goit/static/media/montserrat-latin-400-normal.acb6629fe45c43ad5d8b.woff2",
+    "static/media/montserrat-cyrillic-ext-400-normal.woff": "/test-task-goit/static/media/montserrat-cyrillic-ext-400-normal.4ae7c395ed6c62e4293a.woff",
+    "static/media/montserrat-cyrillic-400-normal.woff": "/test-task-goit/static/media/montserrat-cyrillic-400-normal.be1d5ffb1cc104d1437d.woff",
+    "static/media/montserrat-latin-ext-400-normal.woff2": "/test-task-goit/static/media/montserrat-latin-ext-400-normal.0204ec08a4b574088f02.woff2",
+    "static/media/montserrat-cyrillic-ext-400-normal.woff2": "/test-task-goit/static/media/montserrat-cyrillic-ext-400-normal.bbf9e820a2563aac0d8b.woff2",
+    "static/media/montserrat-cyrillic-400-normal.woff2": "/test-task-goit/static/media/montserrat-cyrillic-400-normal.e5c5c19c23e370a342c8.woff2",
+    "static/media/logo-goit.svg": "/test-task-goit/static/media/logo-goit.e917114d7945c04c85a8946a331d28b6.svg",
+    "static/media/montserrat-vietnamese-400-normal.woff": "/test-task-goit/static/media/montserrat-vietnamese-400-normal.f36d8e9e08c584303451.woff",
+    "static/media/montserrat-vietnamese-400-normal.woff2": "/test-task-goit/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "index.html": "/test-task-goit/index.html",
-    "main.7acaea2f.css.map": "/test-task-goit/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/test-task-goit/static/js/main.07d3183d.js.map"
+    "main.e62d0402.css.map": "/test-task-goit/static/css/main.e62d0402.css.map",
+    "main.88a21af0.js.map": "/test-task-goit/static/js/main.88a21af0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.e62d0402.css",
+    "static/js/main.88a21af0.js"
   ]
 }
