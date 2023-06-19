@@ -10,7 +10,7 @@ export const Tweets = () => {
   const [status, setStatus] = useState('idel');
   const [tweets, setTweets] = useState([]);
   const [error, setError] = useState(null);
-  const [i, setI] = useState(true);
+  // const [i, setI] = useState(true);
   // const [tagImg, setTagImg] = useState('');
 
 
@@ -33,8 +33,8 @@ export const Tweets = () => {
           setStatus('resolved')
         }
         setTweets(state => [...state, ...response.data])
-      } catch (error) {
-        setError(error)
+      } catch (err) {
+        setError(err)
         setStatus('rejected')
       }
     }
@@ -58,6 +58,9 @@ export const Tweets = () => {
   const loadMore = () => {
     setPage(state => state + 1)
   }
+
+  console.log(error)
+
 
   // const toggleModal = () => {
   //   setShowModal(state => !state)
