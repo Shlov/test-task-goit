@@ -1,10 +1,10 @@
 import { TweetCard } from "components/TweetCard/TweetCard";
-import { useHistory, useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
 import { fetchUser, updateSubscriberCount } from "service/api";
 import { TweetsList, Btn, Message, Wrapper, TitleWrapper, FilterWrapper } from "./Tweets.styled";
 import { Loader } from "components/Loader/Loader";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLocalStorage } from "hooks/useLocalStorage";
 import { Skeleton } from "components/Skeleton/Skeleton";
 
