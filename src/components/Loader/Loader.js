@@ -1,10 +1,11 @@
+import { Wrapper } from "./Loader.styled";
 
 
 export const Loader = () => {
 
   return(
-    <div>
-      Loader...
-    </div>
+    <Wrapper>
+      is loading...
+    </Wrapper>
   );
 };

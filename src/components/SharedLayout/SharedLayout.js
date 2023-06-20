@@ -3,7 +3,7 @@ import { Loader } from "components/Loader/Loader";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
-import { Container } from "./SharedLayout.styled";
+import { Container, Footer } from "./SharedLayout.styled";
 
 
 export const SharedLayout = () => {
@@ -15,6 +15,9 @@ export const SharedLayout = () => {
       <Suspense fallback={<Loader/>}>
         <Outlet/>
       </Suspense>
-  </Container>
+      <Footer>
+        by Shlov ʕ·͡ᴥ𐤟ʔ
+      </Footer>
+    </Container>
   );
 };

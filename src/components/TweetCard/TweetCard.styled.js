@@ -70,7 +70,7 @@ export const Btn = styled.button`
   top: 374px;
   margin-top: 10px;
 
-  background-color: #EBD8FF;
+  background-color: ${props => (props.isFollow ? '#5CD3A8' : '#EBD8FF')};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
 
