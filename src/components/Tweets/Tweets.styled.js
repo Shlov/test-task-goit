@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const TweetsList = styled.div`
+export const TweetsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
