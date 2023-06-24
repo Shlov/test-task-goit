@@ -1,4 +1,4 @@
-// import styled from 'styled-components';
+import { useState } from "react";
 import styled, { keyframes, css } from 'styled-components';
 
 const topBubbles = keyframes`
@@ -27,82 +27,31 @@ const bottomBubbles = keyframes`
   }
 `;
 
-const btnContent = keyframes`
-0% {
-    outline: 2.0em solid var(--color-background);
-    outline-offset: 0;
-  }`
-
-
 
 export const Card = styled.li`
-  width: 380px;
-  height: 460px;
-  background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+  width: 240px;
+  height: 140px;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+  /* overflow: hidden; */
   position: relative;
-  z-index: 0;
 `
 
-export const ImageWrapper = styled.div`
+export const CardW = styled.div`
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%); */
+  border-radius: inherit;
   position: relative;
-  display: flex;
-  justify-content: center;
-  height: 214px;
-
-`
-export const Image = styled.img`
-  width: 308px;
-  height: 168px;
-  margin-top: 28px;
 `
 
-export const Logo = styled.div`
-  width: 76px;
-  height: 22px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-
-`
-
-export const AvatarWrapper = styled.div`
-  /* position: relative; */
-  display: flex;
-  height: 8px;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #EBD8FF;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #AE7BE3, inset 0px 3.43693px 2.5777px #FBF8FF;
-`
-export const Avatar = styled.img`
-  width: 80px;
-  height: 80px;
-  margin: 0;
-`
-
-export const DescrWrapper = styled.div`
-  /* position: relative; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 248px;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-
-`
 export const Btn = styled.button`
   width: 196px;
   height: 50px;
   margin-top: 10px;
   background-color: ${props => (props.isFollow ? '#5CD3A8' : '#EBD8FF')};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;  
-  border: none;
+  border-radius: 10.3108px;
 
   font-weight: 600;
   font-size: 18px;
@@ -113,18 +62,8 @@ export const Btn = styled.button`
   display: inline-block;
   cursor: pointer;
   position: relative;
-
-  transition: 1s;
-  box-shadow: 0 0 0.2em 0 ${props => (props.isFollow ? '#5CD3A8' : '#EBD8FF')};
-
-  &:hover, &:focus {
-    transition: 0.5s;
-    -webkit-animation: ${btnContent} 1s;
-    animation: ${btnContent} 1s;
-    outline: 0.1em solid transparent;
-    outline-offset: 0.2em;
-    box-shadow: 0 0 1.4em 0 ${props => (props.isFollow ? '#5CD3A8' : '#EBD8FF')};
-  }
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px ${props => (props.isFollow ? '#5CD3A8' : '#EBD8FF')};
 
   &:focus {
     outline: 0;
@@ -187,15 +126,29 @@ export const Btn = styled.button`
       animation: ${bottomBubbles} ease-in-out 0.75s forwards;
     }
   `}
+
+
 `
 
-export const Txt = styled.p`
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #EBD8FF;
-`
+export const TweetCard = ({user, isFollowing, isFollow}) => {
 
+  const [animate, setAnimate] = useState(false)
+
+  const animateButton = () => {
+    setAnimate(false)
+    setAnimate(true)
+    setTimeout(function () {
+      setAnimate(false)
+    }, 700);
+  };
+
+  return(
+    <Card>
+      <CardW>
+        <Btn onClick={() => {isFollowing(user.id, user.followers); animateButton()}}  isFollow={isFollow}  animate={animate}>
+          {isFollow ? 'Following' : 'Follow'}
+        </Btn>
+      </CardW>
+    </Card>
+  );
+};

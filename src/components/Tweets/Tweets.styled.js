@@ -22,6 +22,20 @@ export const Btn = styled.button`
   line-height: 22px;
   text-transform: uppercase;
   color: #EBD8FF;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #331f62;
+    transform: translateY(-0.1em);
+  }
+  &:active {
+    box-shadow: inset 0px 0.1em 0.6em #331f62;
+    transform: translateY(0em);
+  }
+
 `
 
 export const Message = styled.div`
