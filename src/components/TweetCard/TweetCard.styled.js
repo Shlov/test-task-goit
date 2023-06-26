@@ -77,10 +77,23 @@ export const AvatarWrapper = styled.div`
   background-color: #EBD8FF;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #AE7BE3, inset 0px 3.43693px 2.5777px #FBF8FF;
 `
-export const Avatar = styled.img`
+
+export const AvatarFrame = styled.div`
   width: 80px;
   height: 80px;
+  background: radial-gradient(circle, rgba(174, 123, 227,0) 32px, rgba(174, 123, 227,1) 32px, rgba(251, 248, 255,1) 40px, rgba(0,128,0,0) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+`
+
+export const Avatar = styled.img`
+  width: 64px;
+  height: 64px;
   margin: 0;
+  clip-path: circle(50%);
 `
 
 export const DescrWrapper = styled.div`

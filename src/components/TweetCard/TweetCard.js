@@ -1,4 +1,4 @@
-import { Btn, Card, Logo, Image, ImageWrapper, Avatar, AvatarWrapper, DescrWrapper, Txt } from "./TweetCard.styled";
+import { Btn, Card, Logo, Image, ImageWrapper, Avatar, AvatarWrapper, DescrWrapper, Txt, AvatarFrame } from "./TweetCard.styled";
 import {ReactComponent as LogoSvg} from '../../images/svg/logo-goit.svg';
 import picture from '../../images/tweet-card/picture-card.png';
 import avatar from '../../images/tweet-card/boy-card-2x.png';
@@ -28,7 +28,9 @@ export const TweetCard = ({user, isFollowing, isFollow}) => {
         <Image alt='pic' src={picture}/>
       </ImageWrapper>
       <AvatarWrapper>
-        <Avatar alt='pic' src={avatar}/>
+        <AvatarFrame>
+          <Avatar alt='pic' src={user.avatar === '' ? avatar : user.avatar}/>
+        </AvatarFrame>
       </AvatarWrapper>
       <DescrWrapper>
         <Txt>{`${numberWithCommas(user.tweets)} tweets`}</Txt>
@@ -40,3 +42,4 @@ export const TweetCard = ({user, isFollowing, isFollow}) => {
     </Card>
   );
 };
+
