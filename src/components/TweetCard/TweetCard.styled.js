@@ -49,13 +49,40 @@ export const ImageWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 214px;
+  perspective: 1000px;
 
 `
 export const Image = styled.img`
   width: 308px;
   height: 168px;
   margin-top: 28px;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+  ${ImageWrapper}:hover & {
+    transform: rotateY(180deg);
+  }
+`
+
+
+export const Name = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 500ms ease-in-out;
+  transform: rotateY(180deg);
+  font-size: 28px;
+  color: #FBF8FF;
+
+  backface-visibility: hidden;
+
+  ${ImageWrapper}:hover & {
+    transform: rotateY(360deg);
+  }
 `
 
 export const Logo = styled.div`
@@ -94,10 +121,10 @@ export const Avatar = styled.img`
   height: 64px;
   margin: 0;
   clip-path: circle(50%);
+  background-color: #5736A3;
 `
 
 export const DescrWrapper = styled.div`
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
